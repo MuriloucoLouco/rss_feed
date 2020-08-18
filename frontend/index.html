@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Muriloso</title>
+    <style>
+        body {
+            background-color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #DDD;
+        }
+
+        .container {
+            display: inline-block;
+            padding: 10px 10px;
+            max-width: 50%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            max-height: 300px;
+            padding: 10px 10px;
+            background-color: #222;
+            border-radius: 30px;
+        }
+
+        a {
+            color:aliceblue;
+            text-decoration: none;
+        }
+
+        a_wrap {
+
+            padding-top: 3px;
+        }
+
+    </style>
 </head>
 <body>
     <noscript>
@@ -25,24 +59,33 @@
             body.innerHTML = '';
 
             Object.entries(rss_json).forEach(itens => {
-                new_div = document.createElement('div');
+                div = document.createElement('div');
+                sub_div = document.createElement('div');
                 br = document.createElement('br');
 
                 title = document.createElement('h1');
                 title.innerHTML = itens[0];
-                new_div.appendChild(title);
+                sub_div.appendChild(title);
 
                 itens[1].forEach(item => {
                     link = document.createElement('a');
                     link.innerHTML = item.title;
                     link.href = item.link;
 
+                    a_wrap = document.createElement('div');
+
                     br = document.createElement('br');
-                    new_div.appendChild(br);
-                    new_div.appendChild(link);
+                    sub_div.appendChild(br);
+                    a_wrap.appendChild(link);
+                    sub_div.appendChild(a_wrap);
                 });
 
-                body.appendChild(new_div);
+                div.appendChild(sub_div);
+                body.appendChild(div);
+
+                div.className = 'container';
+                sub_div.className = 'wrapper';
+                a_wrap.className = 'a_wrap';
             })
         }
 

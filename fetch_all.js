@@ -1,8 +1,8 @@
 const {fetch_animelist, fetch_invidious, fetch_reddit, fetch_devto, fetch_freecodecamp} = require('./fetch');
 
 const cosenza = 'https://myanimelist.net/rss.php?type=rwe&u=Cosenza';
-const mental_outlaw = 'https://invidious.13ad.de/feed/channel/UC7YOGHUfC1Tb6E4pudI9STA';
-const luke_smith = 'https://invidious.13ad.de/feed/channel/UC2eYFnH61tmytImy1mTYvhA';
+const mental_outlaw = 'https://invidious.snopyta.org/feed/channel/UC7YOGHUfC1Tb6E4pudI9STA';
+const luke_smith = 'https://invidious.snopyta.org/feed/channel/UC2eYFnH61tmytImy1mTYvhA';
 const devto = 'https://dev.to/rss';
 const freecodecamp = 'https://www.freecodecamp.org/news/rss/';
 const internetisbeatiful = 'https://www.reddit.com/r/InternetIsBeautiful/.rss';

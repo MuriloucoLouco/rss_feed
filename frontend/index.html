@@ -7,14 +7,14 @@
     <style>
         body {
             background-color: #111;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Helvetica, sans-serif;
             color: #DDD;
         }
 
         .container {
-            display: inline-block;
+            display: block;
             padding: 10px 10px;
-            max-width: 50%;
+            max-width: 80%;
         }
 
         .wrapper {
@@ -28,15 +28,13 @@
         }
 
         a {
-            color:aliceblue;
-            text-decoration: none;
+            color: #31f53f;
+            text-decoration: under;
         }
 
-        a_wrap {
-
-            padding-top: 3px;
+        .a_wrap {
+            padding-top: 1vh;
         }
-
     </style>
 </head>
 <body>
@@ -73,7 +71,8 @@
                     link.href = item.link;
 
                     a_wrap = document.createElement('div');
-
+					a_wrap.classList.add('a_wrap');
+					
                     br = document.createElement('br');
                     sub_div.appendChild(br);
                     a_wrap.appendChild(link);
